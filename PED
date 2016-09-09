@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#===========================================================
+#Copyright(c)2015, IBMC, CNRS
+#All rights reserved.
+#NAME:		PED: Point Electron Density
+#ABSTRACT:	Calculate Point Electron Density for all Atoms in a PDB file
+#DATE:		Tue Mar  1 10:52:07 2016
+#Usage:		./PED pdb_file omap_file
+#example:	./PED 1ehz.pdb 1ehz.omap
+#output:	density file ended with '.dens', pdb file ended with '.ent'
+#example:	1ehz.dens, 1ehz.ent
+#VERSION: 	0.01
+#AUTHOR: 	Miao Zhichao
+#CONTACT: 	chichaumiau AT gmail DOT com
+#NOTICE: This is free software and the source code is freely
+#available. You are free to redistribute or modify under the
+#conditions that (1) this notice is not removed or modified
+#in any way and (2) any modified versions of the program are
+#also available for free.
+#		** Absolutely no Warranty **
+#===========================================================
+#Please install chimera before using this program
+#chimera is available at: https://www.cgl.ucsf.edu/chimera/
+
+###################################################################
+chimera_bin=/home/chichau/Software/Chimera/bin/chimera #replace with your chimera directory before use
+###################################################################
+
+pdb=$1 #PDB file, should be ended with suffix '.pdb'
+omap=$2 #Electron density map, omap, available at http://eds.bmc.uu.se/eds/
+
+$chimera_bin --nogui --nostatus --silent --script  "density.py $pdb $omap"
+dens=$(printf '%s' $pdb |sed -e 's/.pdb/.dens/g')
+cut -f 6 $dens | paste -sd+ |bc
+
