@@ -1,7 +1,7 @@
 
 #PED: Point Electron Density
 
-===============Install======================================================
+===============Install====================================================<br/>
 1. Download chimera from https://www.cgl.ucsf.edu/chimera/ and install
 Find the binary execution of chimera in the 'bin' folder.
 
