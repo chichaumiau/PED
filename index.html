@@ -11,7 +11,7 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Ped</h1>
+      <h1 class="project-name">PED</h1>
       <h2 class="project-tagline">PED: Point Electron Density</h2>
       <a href="https://github.com/chichaumiau/PED" class="btn">View on GitHub</a>
       <a href="https://github.com/chichaumiau/PED/zipball/master" class="btn">Download .zip</a>
@@ -25,14 +25,66 @@
 <p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
 
 <h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h3>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+<h4>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h4>
+
+<ol>
+<li>Download chimera from <a href="https://www.cgl.ucsf.edu/chimera/">https://www.cgl.ucsf.edu/chimera/</a> and install<br>
+Find the binary execution of chimera in the 'bin' folder.<br><br>
+</li>
+<li>Replace the line 'chimera_bin=' in 'PED' file with your chimera dir<br>
+</li>
+</ol>
+
+<h4>
+<a id="usage-1" class="anchor" href="#usage-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h4>
+
+<p>./PED pdb_file omap_file<br>
+example:    ./PED 1ehz.pdb 1ehz.omap<br></p>
+
+<p>input files: <br>
+1. PDB file #standard PDB format, only 'ATOM' and 'HETATM' lines are considered<br>
+2. Electron density map file, omap, available at <a href="http://eds.bmc.uu.se/eds/">http://eds.bmc.uu.se/eds/</a><br></p>
+
+<p>output files:<br>
+1. '.dens' file, list of atoms with point electron density<br>
+example:<br>
+G   A   1   OP3 99.85   1.16<br>
+G   A   1   P   100.19  1.88<br>
+G   A   1   OP1 100.19  0.95<br>
+G   A   1   OP2 99.21   1.18<br>
+G   A   1   O5' 99.82   1.54<br>
+G   A   1   C5' 98.63   0.92<br>
+G   A   1   C4' 97.84   1.03<br>
+G   A   1   O4' 97.10   0.93<br>
+G   A   1   C3' 98.07   1.08<br>
+G   A   1   O3' 99.39   1.05<br>
+G   A   1   C2' 96.96   1.53<br>
+G   A   1   O2' 96.77   0.99<br>
+Residue=Ch===#Res======Atom===B factor=PointElecDensity<br><br>
+2. '.ent' file, PDB format file, the SegId column is replaced with point electron density<br>
+example:<br>
+ATOM      1  N   GLN A   1      26.544  15.247  15.544  1.00 40.54      0.48 N  <br>
+ATOM      2  CA  GLN A   1      27.006  15.744  16.843  1.00 23.59      2.12 C  <br>
+ATOM      3  C   GLN A   1      25.837  16.192  17.710  1.00 19.71      2.69 C  <br>
+ATOM      4  O   GLN A   1      25.930  17.211  18.394  1.00 20.35      3.41 O  <br>
+ATOM      5  CB  GLN A   1      27.962  16.905  16.627  1.00 27.73      1.56 C  <br>
+ATOM      6  CG  GLN A   1      27.432  17.948  15.648  1.00 48.19      1.02 C  <br>
+ATOM      7  CD  GLN A   1      27.620  19.361  16.180  1.00 62.99      0.81 C  <br>
+ATOM      8  OE1 GLN A   1      28.461  19.615  17.051  1.00 52.44      0.80 O  <br>
+ATOM      9  NE2 GLN A   1      26.824  20.288  15.653  1.00 76.44      0.29 N  <br>
+=======================================================================segId==<br></p>
 
 <h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+<a id="citation" class="anchor" href="#citation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Citation</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>Quantifying side-chain conformational variations in protein structure
+Zhichao Miao &amp; Yang Cao
+Scientific Reports 6, Article number: 37024 (2016)
+doi:10.1038/srep37024
+<a href="http://www.nature.com/articles/srep37024">http://www.nature.com/articles/srep37024</a></p>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
@@ -42,10 +94,10 @@
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="zmiao@ebi.ac.uk">contact support</a> and we’ll help you sort it out.</p>
+<p>Having trouble with Pages? Check out my <a href="https://github.com/chichaumiau/PED/blob/master/README.md">documentation</a> or <a href="chichaumiau@gmail.com">contact support</a> and I will help you sort it out.</p>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/chichaumiau/PED">Ped</a> is maintained by <a href="https://github.com/chichaumiau">chichaumiau</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/chichaumiau/PED">PED</a> is maintained by <a href="https://github.com/chichaumiau">chichaumiau</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
