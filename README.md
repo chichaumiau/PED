@@ -3,9 +3,8 @@
 
 ===============Install====================================================<br/>
 1. Download chimera from https://www.cgl.ucsf.edu/chimera/ and install<br/>
-Find the binary execution of chimera in the 'bin' folder.<br/>
-
-\2. Replace the line 'chimera_bin=' in 'PED' file with your chimera dir<br/>
+Find the binary execution of chimera in the 'bin' folder.<br/><br/>
+2. Replace the line 'chimera_bin=' in 'PED' file with your chimera dir<br/>
 
 
 ===============Usage======================================================<br/>
@@ -31,9 +30,8 @@ G	A	1	C3'	98.07	1.08<br/>
 G	A	1	O3'	99.39	1.05<br/>
 G	A	1	C2'	96.96	1.53<br/>
 G	A	1	O2'	96.77	0.99<br/>
-Residue=Ch===#Res======Atom===B factor=PointElecDensity<br/>
-
-\2. '.ent' file, PDB format file, the SegId column is replaced with point electron density<br/>
+Residue=Ch===#Res======Atom===B factor=PointElecDensity<br/><br/>
+2. '.ent' file, PDB format file, the SegId column is replaced with point electron density<br/>
 example:<br/>
 ATOM      1  N   GLN A   1      26.544  15.247  15.544  1.00 40.54      0.48 N  <br/>
 ATOM      2  CA  GLN A   1      27.006  15.744  16.843  1.00 23.59      2.12 C  <br/>
@@ -46,6 +44,6 @@ ATOM      8  OE1 GLN A   1      28.461  19.615  17.051  1.00 52.44      0.80 O  
 ATOM      9  NE2 GLN A   1      26.824  20.288  15.653  1.00 76.44      0.29 N  <br/>
 =======================================================================segId==<br/>
 
+***
 
-
-Please contact Chichau by email chichaumiau@gmail.com if you have any problem.
+Please contact Chichau by [email](chichaumiau@gmail.com) if you have any problem.
