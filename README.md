@@ -8,12 +8,13 @@ Find the binary execution of chimera in the 'bin' folder.<br/><br/>
 
 
 ===============Usage======================================================<br/>
-./PED pdb_file omap_file<br/>
-example:	./PED 1ehz.pdb 1ehz.omap<br/>
+./PED pdb_file ccp4_file/omap_file<br/>
+example:	./PED 1ehz.pdb 1ehz.ccp4<br/>
 
 input files: <br/>
 1. PDB file #standard PDB format, only 'ATOM' and 'HETATM' lines are considered<br/>
-2. Electron density map file, omap, available at http://eds.bmc.uu.se/eds/<br/>
+2. Electron density map file, ccp4 file/omap file, available at http://eds.bmc.uu.se/eds/<br/>
+Now the omap files are superseded by ccp4 files in PDBe: http://www.ebi.ac.uk/pdbe/eds. 
 
 output files:<br/>
 1. '.dens' file, list of atoms with point electron density<br/>
@@ -46,4 +47,4 @@ ATOM      9  NE2 GLN A   1      26.824  20.288  15.653  1.00 76.44      0.29 N  
 
 ***
 
-Please contact Chichau by [email](chichaumiau@gmail.com) if you have any problem.
+Please contact Chichau by [email](mailto:chichaumiau@gmail.com) if you have any problem.
